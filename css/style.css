@@ -1,0 +1,212 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*::selection {background-color: grey;}
+html {height: 100%;}
+body {
+	overflow: hidden;
+	background-color: black;
+	color: white;
+	padding: 0;
+	margin: 0;
+	font-family: 'roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+h1,h2,h3,h4,h5,h6 {font-weight: 300;}
+img {height: auto; width: auto; max-height: 100%; max-width: 100%;}
+div.article-content img, .contenu img {box-shadow: 0 0 5px black;}
+div.article-content p:not(.more) a {color: black;}
+
+.date {background-color: black;	padding: 0.15em;}
+.icon {display: inline-block; width: 32px; height: 32px; background-image: url('../img/icons.png');}
+.label {background-position: 92px; vertical-align: bottom;}
+
+/*ALIGNEMENT*/
+img.left {margin: 0 15px 15px 0;}
+img.right {margin: 0 0 15px 15px;}
+.right {float: right;}
+.left {float: left;}
+
+.page {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 2%;
+	text-decoration: none;
+	box-shadow: inset 0px 0px 100px 5px #000;
+	-webkit-box-shadow: inset 0px 0px 100px 5px #000;
+	background-color: #2289A1;
+	overflow: auto;
+}
+
+h1 {
+	text-shadow: 0px 0px 10px black;
+	margin: 0 0 0.5em 0;
+	line-height: 1em;
+	text-align: center;
+}
+
+/*LIENS*/
+aside a, #credits a {color: #2289A1; text-decoration: none;}
+.page a {color: black; text-decoration: none;}
+.article a {color: white; text-decoration: none;}
+.static a:hover, #menu a:hover {text-transform: uppercase;}
+a:hover, #credits a:hover {text-decoration: underline; }
+
+.bckgrnd {text-shadow: 0px 0px 10px black; margin: auto; background-color: rgba(0,0,0,0.4); width: 50%;}
+#pagination {text-align: center;}
+
+/*=========================================STATIQUE=========================================*/
+#static-1 {background: #2289A1;}
+#static-2 {background: #ECB032;}
+#static-3 {background: #e74c3c;}
+#static-4 {background: #409467;}
+#static-7 {background-image: url('../img/background.jpg'); background-size: cover; -moz-background-size: cover; -ms-background-size: cover; -o-background-size: cover; }
+.static {text-align: center;}
+
+/*=========================================ARTICLE=========================================*/
+.article h2 a {color: white;}
+.tag {display: inline-block; padding: 2px 8px 5px 8px; 	background-color: rgba(0,0,0, 0.5); border-radius: 5px;}
+a.tag:hover {color: #2289A1;; background-color: black;}
+.article-info {clear: both;}
+.article article:nth-of-type(1) {border-top: 4px solid white;}
+.article article {border-bottom: 4px solid white;}
+
+.more a {display: inline-block; float: right; padding: 2px 8px 5px 8px; background-color: rgba(0,0,0, 0.5); color: white; border-radius: 5px;}
+.more a:hover {text-transform: none; color: #2289A1; background-color: black; box-shadow: 0px 0px 10px #000;}
+
+/*=========================================COMMENTAIRE=========================================*/
+.comment {background-color: #0B3039; padding: 5px 5px 5px 0.5em;}
+.infoComment {display: inline-block; width: 100%; border-bottom: 1px dashed; padding: 0.4em 0 0.4em 0;}
+form p {
+	text-indent: 0px;
+	border-left: none;
+	padding-left: 0px;
+	margin-left: 0px;
+	text-align: center;
+}
+input, textarea  {
+	width: 100%;
+	font-family: 'roboto', sans-serif;
+    border: medium none;
+    color: #fff;
+    padding: 0.3em;
+	text-shadow: none;
+	margin: 0px;
+	margin-bottom: 0.4em;
+	outline: none;
+	font-weight: 300;
+	font-size: 1em;
+	background: #000;
+}
+
+textarea { height: 150px; padding: 8px 8px 0px 8px;}
+input:focus, textarea:focus {background-color: #114450; box-shadow: 0px 0px 10px black;}
+input[type='submit'], input[type="reset"] {
+	width: auto;
+	float: right;
+	background: black;
+	color: #2289A1;
+	box-shadow: 0px 0px 10px black;
+	cursor: pointer;
+	font-size: 1.2em;
+	padding: 5px 8px 5px 8px;
+	margin-left: 8px;
+}
+input[type='submit']:hover, input[type="reset"]:hover { color: white; background: #114450; box-shadow: 0px 0px 10px #114450;}
+#id_rep {width: 60px;}
+
+/*MESSAGE*/
+.com-alert {display: none; background-color: #CC0000; padding: 8px 8px 8px 8px; -webkit-animation: popin 1s ease-out;}
+.require {box-shadow: 0px 0px 10px 2px #CC0000;}
+.contact_error {background-color: #CC0000; padding: 8px 8px 8px 8px; text-align: center;}
+.contact_success {background-color: #669900; padding: 8px 8px 8px 8px; text-align: center;}
+
+/*=========================================ASIDE=========================================*/
+aside {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 240px;
+    height: 100%;
+	overflow: auto;
+	background-color: black;
+	text-align: center;
+	color: white;
+}
+aside h1 {margin: 0.4em 0 0.5em 0;}
+aside h1 a {color: white;}
+#menu {border-bottom: 1px solid #2289A1; margin-bottom: 1em;}
+#menu a:hover {background: #2289A1; color: black;}
+#menu a {
+	display: block;
+	color: #2289A1;
+	padding: 1em 1em;
+	margin: 0px;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+aside > div {margin-bottom: 1em;}
+
+/*=========================================FOOTER=========================================*/
+#footer {
+	position: absolute; 
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+/*=========================================TABLEAUX=========================================*/
+table::before {content: <div style="width: 100%; overflow: auto;">;}
+table::after {content: </div>;}
+table {width: 100%; cursor: text; border-spacing: 0; background-color: rgba(0,0,0,0.6);}
+table td {border-left: 2px solid white; padding: 8px;}
+table tr td:first-child {border-left: 0;}
+table tr:nth-of-type(odd) {background-color: rgba(0,0,0,0.2);}
+table tr:first-child td {background-color: black;}
+table.mceItemTable td a {color: #2289A1;}
+
+/*=========================================AUTRES=========================================*/
+.line {width: 100%;}
+.line > div { background-color: rgba(0,0,0,0.4); margin: 1%; padding: 0.5%;}
+.left {float: left;}
+.w25 {width: 23%;}
+.w33 {width: 33%;}
+#credits article h1 {margin: 0;}
+#overlay {position: absolute; top: 0; left:0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);	z-index: 100;}
+a.fullScreen {display: inline-block; width: 32px; height: 32px; vertical-align: middle; background-image: url('../img/icons.png'); background-position: 64px;}
+a.fullScreen:hover {background-color: black;}
+pre {display: inline-block; margin: 0 auto; text-align: left; background-color: black; color: #2289A1; padding: 8px; max-width: 100%; overflow: auto;}
+.social-buttons {display: inline-block; vertical-align: bottom;}
+
+@-webkit-keyframes popin {
+	0% {-webkit--webkit-transform: scale(0); opacity: 0;}
+	50% {-webkit-transform: scale(1.5); opacity: 1;}
+	100% {-webkit-transform: scale(1); opacity: 1;}
+}
+
+/*========ARCHITECTURE========*/
+.table {display: table; table-layout: fixed; width: 100%; overflow: hidden; border-spacing: 1em 0.5em;}
+.table > div {display: table-row; width: 100%}
+.table > div > div {display: table-cell; }
+.table > div > div > div {display: table-cell; width: 25%; background-color: rgba(0,0,0,0.4); text-align: left;}
+.table > div > div > div h2 {text-align: center;}
+.colonne div.contenu {margin: 1px; padding: 15px;}
+.table ul{list-style-type: none; padding-left: 1em;}
+
+/*=========================================MOBILE=========================================*/
+.navbar {display: none;}
+.popup {display: none;}
+#smartphone {display: none; position: absolute; height: 100%; z-index: 1; background-color: black; padding: 1em; padding-top: 15%; }
+#smartphone a {display: inline-block; font-size: 1.23em; padding: 0.5em; margin-top: 1em; background-color: green; color: white; text-align: center;text-decoration: none;}
+#smartphone a.cancel {background-color: #CC0000;}
+#smartphone a:hover {background-color: white; color: black;}
+@media (max-width: 640px) {	#smartphone {display: block;} }
+
+/*========TABLETTE========*/
+@media handled, screen and (max-width:1440px) {
+	.table > div {display: table; table-layout: fixed; /*word-break: break-all;*/ width: 100%;}
+	.table > div > div {display: table-row; width: 100%;}
+}
